@@ -55,17 +55,19 @@ def plot(kind: seaborn, data: pandas.DataFrame, x_arg: str = None, y_arg: str = 
             pyplot.title(title, size = 12, weight = 'bold')
             pyplot.xlabel(x_label, size = 10, weight = 'bold')
             pyplot.ylabel(y_label, size = 10, weight = 'bold')
-            for p in ax.patches:
-                ax.annotate('{:.3f}%'.format((p.get_height()/data.shape[0] * 100)), (p.get_x()+0.2, p.get_height()+1),
-                    ha = 'left', va = 'bottom', size = 12)  
+            if annot: 
+                for p in ax.patches:
+                    ax.annotate('{:.3f}%'.format((p.get_height()/data.shape[0] * 100)), (p.get_x()+0.2, p.get_height()+1),
+                        ha = 'left', va = 'bottom', size = 12)  
         elif x_arg == None:
             ay = seaborn.countplot(data = data, y = y_arg, color = seaborn.color_palette()[0], order = order)
             pyplot.title(title, size = 12, weight = 'bold')
             pyplot.xlabel(x_label, size = 10, weight = 'bold')
             pyplot.ylabel(y_label, size = 10, weight = 'bold')
-            for p in ay.patches:
-                ay.annotate('{:.3f}%'.format((p.get_width()/data.shape[0]) * 100),
-                            (p.get_x() + p.get_width() + 0.02, p.get_y() + p.get_height()/2), size = 12)
+            if annot: 
+                for p in ay.patches:
+                    ay.annotate('{:.3f}%'.format((p.get_width()/data.shape[0]) * 100),
+                                (p.get_x() + p.get_width() + 0.02, p.get_y() + p.get_height()/2), size = 12)
     
     else:
         kind(data=data, x=x_arg, y=y_arg, hue=hue, color=color)
