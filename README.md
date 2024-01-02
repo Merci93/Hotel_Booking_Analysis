@@ -63,7 +63,7 @@ The task involves a thorough analysis of a comprehensive dataset, featuring intr
 - **Revenue Loss:** Loss in revenue if the booking was canceled (negative value if the booking was canceled)
 
 # Dashboards
-An interractive dashboard was created using Power BI desktop to answer he above questions and derive insights using the data. Each dashboard contains filters to enable selective exploration of the results displayed. The dashboards are as shown below:
+An interractive dashboard was created using Power BI desktop to answer the above questions, and derive insights using the data. Each dashboard contain filters to enable selective exploration of the results displayed. The dashboards are as shown below:
 
 ### Overview
 ![](images/overview.png)
