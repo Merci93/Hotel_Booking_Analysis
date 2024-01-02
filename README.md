@@ -62,3 +62,35 @@ The task involves a thorough analysis of a comprehensive dataset, featuring intr
 - **Revenue:** Revenue generated from the booking.
 - **Revenue Loss:** Loss in revenue if the booking was canceled (negative value if the booking was canceled)
 
+# Dashboards
+An interractive dashboard was created using Power BI desktop to answer he above questions and derive insights using the data. Each dashboard contains filters to enable selective exploration of the results displayed. The dashboards are as shown below:
+
+### Overview
+![](images/overview.png)
+
+### Booking Patterns
+![](images/booking_pattern.png)
+
+### Customer Behavior
+![](images/customer_behaviour.png)
+
+### Cancellation Analysis
+![](images/cancellation_analysis.png)
+
+### Revenue Optimization
+![](images/revenue_optimization.png)
+
+### Geographical Analysis
+![](images/geographical_analysis.png)
+
+### Operational Efficiency
+![](images/operational_Efficiency.png)
+
+### Impact of Deposit Types
+![](images/deposit_types.png)
+
+### Analysis of Corporate Bookings
+![](images/corporate_bookings.png)
+
+### Comparison of Online and Offline Travel Agents
+![](images/travel_agents.png)
