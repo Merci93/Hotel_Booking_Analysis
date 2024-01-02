@@ -10,7 +10,7 @@ def plot(kind: seaborn, data: pandas.DataFrame, x_arg: str = None, y_arg: str = 
          y_label: str = None, color: seaborn.color_palette() = seaborn.color_palette()[0], bin_size: int = 50,
          marker_: str = "o") -> None:
     """
-    A univariate plot function that creates defined seaborn plot.
+    Creates a user defined plot using seaborn and matplotlib.
 
     :param kind: seaborn plot
     :param data: The dataframe from where the feature is to be plotted.
@@ -57,8 +57,8 @@ def plot(kind: seaborn, data: pandas.DataFrame, x_arg: str = None, y_arg: str = 
             pyplot.ylabel(y_label, size = 10, weight = 'bold')
             if annot: 
                 for p in ax.patches:
-                    ax.annotate('{:.3f}%'.format((p.get_height()/data.shape[0] * 100)), (p.get_x()+0.2, p.get_height()+1),
-                        ha = 'left', va = 'bottom', size = 12)  
+                    ax.annotate('{:.3f}%'.format((p.get_height()/data.shape[0] * 100)), 
+                                (p.get_x() + 0.2, p.get_height() + 1), ha='left', va='bottom', size=12)  
         elif x_arg == None:
             ay = seaborn.countplot(data = data, y = y_arg, color = seaborn.color_palette()[0], order = order)
             pyplot.title(title, size = 12, weight = 'bold')
